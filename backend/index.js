@@ -23,7 +23,9 @@ app.use(xssClean());
 
 app.use('/auth', authRoutes);
 app.use('/todos', authMiddleWare, todosRoutes);
-
+app.get('/',(req,res)=>{
+    res.send("I am Working");
+})
 //Connecting to mongodb
 connnectToDb()
 
